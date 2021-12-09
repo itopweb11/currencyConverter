@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CurrencyConverter from "./components/CurrencyConverter/CurrencyConverter";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CurrencyConverter />
   </React.StrictMode>,
   document.getElementById('root')
 );
