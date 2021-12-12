@@ -1,4 +1,4 @@
-export const currencyDesc = {
+export const currencyRU = {
     "AED": "Дирхам Объединенных Арабских Эмиратов",
     "AFN": "Афганский афгани",
     "ALL": "Албанский Лек",
@@ -172,3 +172,25 @@ export const currencyDesc = {
     "ZWL": "Зимбабвийский доллар"
 }
 
+export const language = {
+    title: {
+        RU: 'Конвертер валют',
+        EN: 'Currency Converter'
+    },
+    subTitle: {
+        RU: 'Конвертируйте популярные валюты по эффективным курсам обмена с помощью нашего калькулятора-конвертера валют.',
+        EN: 'Convert popular currencies at efficient exchange rates with our currency converter calculator.'
+    },
+    info: {
+        RU: 'Что такое конвертер валют?',
+        EN: 'What is a currency converter?'
+    },
+    infoDesc: {
+        RU: 'Наш онлайн-конвертер валют - это быстрый и простой способ узнать текущие рыночные обменные курсы одним нажатием кнопки.',
+        EN: 'Our online currency converter is a quick and easy way to find out the current market exchange rates with the click of a button.'
+    },
+    langIcon: {
+        RU: 'RU',
+        EN: 'EN'
+    },
+}
