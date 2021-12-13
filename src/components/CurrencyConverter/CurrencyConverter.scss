@@ -8,11 +8,13 @@
   background: url("../../img/bac1.svg") no-repeat 100% 100% / cover;
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 50px;
 }
 .container {
   padding-top: 30px;
+  max-width: 950px;
 }
 
 .currencyConverter__header {
@@ -106,9 +108,11 @@
 }
 
 .currencyConverter__desc {
-  margin-top: 60px;
+  margin-top: 50px;
+  position: relative;
+  z-index: 1;
   h2 {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
   }
 
@@ -137,21 +141,21 @@ span {
   margin-right: 20px;
 
   img {
-    margin: 0 15px;
-    cursor: pointer;
+    margin-right: 15px;
   }
 
   p {
     font-size: 22px;
     color: #0ab9cd;
-    margin-left: 15px;
-    cursor: pointer;
+    margin: 0 15px;
   }
 }
 
 .currencyConverter__calculator__box__info {
   min-height: 60px;
   display: flex;
+  align-items: end;
+
   p {
     font-size: 22px;
     color: #0ab9cd;
@@ -174,14 +178,51 @@ span {
   opacity: 0;
 }
 
-select {
-  width: 50px;
+.currencyConverter__calculator__box__block__desc {
+  width: 485px;
+  height: 215px;
+  background: #fff;
+  overflow: auto;
+  padding: 18px 0 0 15px;
   border: none;
-  font-size: 20px;
-  appearance: none;
-  margin: 0 20px 0 27px;
-  color:#0ab9cd;
-  cursor: pointer;
-  outline: none;
-  word-spacing: 20px;
+  margin-left: 555px;
+  margin-top: -14px;
+  border-radius: 0 0 16px 16px;
+  display: block;
+  position: absolute;
+  z-index: 2;
+
+  p {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: sans-serif;
+    word-spacing: 3px;
+    cursor: pointer;
+  }
+
+  p:hover {
+    color: #0ab9cd;
+    text-decoration: underline;
+  }
 }
+
+.currencyConverter__calculator__box__block__active {
+  cursor: pointer;
+}
+
+.currencyConverter__calculator__box__block__desc_none {
+  display: none;
+}
+
+.currencyConverter__calculator__box__block__img {
+  transition: all .5s linear;
+  transform: rotate(180deg);
+}
+
+.currencyConverter__calculator__box__block__img__active {
+  transition: all .5s linear;
+  transform: rotate(0);
+}
+
+
+

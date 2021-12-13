@@ -178,8 +178,8 @@ export const language = {
         EN: 'Currency Converter'
     },
     subTitle: {
-        RU: 'Конвертируйте популярные валюты по эффективным курсам обмена с помощью нашего калькулятора-конвертера валют.',
-        EN: 'Convert popular currencies at efficient exchange rates with our currency converter calculator.'
+        RU: 'Конвертируйте популярные валюты по по соотношении к доллару , обмена с помощью нашего калькулятора-конвертера валют.',
+        EN: 'Convert popular currencies based on the ratio to the dollar exchange using our currency converter calculator.'
     },
     info: {
         RU: 'Что такое конвертер валют?',
