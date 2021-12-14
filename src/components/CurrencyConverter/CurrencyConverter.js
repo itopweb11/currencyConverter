@@ -3,7 +3,7 @@ import './CurrencyConverter.scss';
 import axios from "axios";
 import {currencyRU} from "./helpers";
 import {language} from "./helpers";
-import logo from '../../img/logo01.png'
+import logo from '../../img/logo1.png'
 import phoneImg from '../../img/home123.png'
 import logoImg from '../../img/logoIcon.png'
 import checkIcon from '../../img/checkIcon.png'
