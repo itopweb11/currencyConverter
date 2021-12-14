@@ -35,18 +35,26 @@ const CurrencyConverter = () => {
             <div className='currencyConverter'>
                 <div className='container'>
                     <div className='currencyConverter__header'>
-                        <img src={logo} alt="logo"/>
-                        <div onClick={() => sprache ? setSprache(false) : setSprache(true)} className='currencyConverter__header__icon'>
-                            {sprache ? <button onClick={() => setSprache(false)} className='buttonActive'></button>: null}
-                            <img src={internet} alt="icon"/>
-                            <p>{language.langIcon[lang]}</p>
-                        </div>
-                        <div
-                            onClick={() => setSprache(false)}
-                            className={sprache ? 'currencyConverter__header__switchBlockActive currencyConverter__header__switchBlock' : 'currencyConverter__header__switchBlockNone'}
-                        >
-                            <p onClick={() => setLang('EN')}>EN England</p>
-                            <p onClick={() => setLang('RU')}>RU Русский</p>
+                        <img className='currencyConverter__header__logo' src={logo} alt="logo"/>
+                        <div className='switchBlock'>
+                            <div onClick={() => sprache ? setSprache(false) : setSprache(true)} className='currencyConverter__header__icon'>
+                                {sprache ? <button onClick={() => setSprache(false)} className='buttonActive'></button>: null}
+                                <img src={internet} alt="icon"/>
+                                <p>{language.langIcon[lang]}</p>
+                            </div>
+                            <div
+                                onClick={() => setSprache(false)}
+                                className={sprache ? 'currencyConverter__header__switchBlockActive currencyConverter__header__switchBlock' : 'currencyConverter__header__switchBlockNone'}
+                            >
+                                <div className='switchBlock__textActive'>
+                                    <p onClick={() => setLang('EN')}>EN England</p>
+                                    <p onClick={() => setLang('RU')}>RU Русский</p>
+                                </div>
+                                <div className='switchBlock__text'>
+                                    <p onClick={() => setLang('EN')}>EN</p>
+                                    <p onClick={() => setLang('RU')}>RU</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='currencyConverter__content'>
@@ -58,7 +66,8 @@ const CurrencyConverter = () => {
                             <div className='currencyConverter__calculator__box__block'>
                                 <p>USD</p>
                             </div>
-                            <div className='currencyConverter__calculator__box__info'>
+                            <div className='currencyConverter__calculator__box__info currencyConverter__calculator__box__desc'>
+                                <p>{language.boxDesc[lang]}</p>
                                 <input
                                     onChange={event => setNumber(event.target.value)}
                                     type="number"

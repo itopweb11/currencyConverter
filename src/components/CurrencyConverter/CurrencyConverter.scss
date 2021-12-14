@@ -22,6 +22,14 @@
   align-items: center;
 }
 
+.switchBlock {
+  display: flex;
+}
+
+.switchBlock__text {
+  display: none;
+}
+
 .currencyConverter__header__icon {
   margin-left: 50px;
   display: flex;
@@ -103,8 +111,8 @@
 
 .currencyConverter__img {
   padding-top: 30px;
-  width: 755px;
-  height: 550px;
+  max-width: 755px;
+  min-height: 550px;
 }
 
 .currencyConverter__desc {
@@ -170,6 +178,13 @@ span {
   }
 }
 
+.currencyConverter__calculator__box__desc {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
 .buttonActive {
   position: fixed;
   width: 100vw;
@@ -179,13 +194,13 @@ span {
 }
 
 .currencyConverter__calculator__box__block__desc {
-  width: 485px;
+  width: 432px;
   height: 215px;
   background: #fff;
   overflow: auto;
   padding: 18px 0 0 15px;
   border: none;
-  margin-left: 555px;
+  margin-left: 503px;
   margin-top: -14px;
   border-radius: 0 0 16px 16px;
   display: block;
@@ -222,6 +237,224 @@ span {
 .currencyConverter__calculator__box__block__img__active {
   transition: all .5s linear;
   transform: rotate(0);
+}
+
+
+
+
+@media  screen and (max-width: 1450px) {
+  body {
+    background: #0ab9cd;
+  }
+}
+
+@media  screen and (max-width: 1151px) {
+  .currencyConverter {
+    padding: 0 23px;
+  }
+
+}
+
+@media  screen and (max-width: 1000px) {
+  .currencyConverter__calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .currencyConverter__calculator__switch img {
+    margin: 10px 0 10px 250px;
+  }
+
+  .currencyConverter__calculator__box__block__desc {
+    margin-left: 0;
+    width: 485px;
+  }
+}
+
+@media  screen and (max-width: 830px) {
+  .currencyConverter__img {
+    img {
+      width: 700px;
+      height: 450px;
+    }
+  }
+}
+
+@media  screen and (max-width: 730px) {
+  .currencyConverter__img {
+    img {
+      width: 600px;
+      height: 350px;
+    }
+  }
+
+  .currencyConverter__content h1 {
+    font-size: 67px;
+  }
+}
+
+@media  screen and (max-width: 630px) {
+  .currencyConverter__img {
+    img {
+      width: 500px;
+      height: 250px;
+    }
+  }
+
+  .currencyConverter__content h1 {
+    font-size: 57px;
+  }
+}
+
+@media  screen and (max-width: 590px) {
+  .switchBlock__text {
+    display: block;
+  }
+
+  .switchBlock__textActive {
+    display: none;
+  }
+
+  .currencyConverter__header__switchBlock {
+    width: 44px;
+  }
+}
+
+@media  screen and (max-width: 550px) {
+.currencyConverter__img {
+  img {
+    width: 400px;
+    height: 200px;
+  }
+}
+
+.currencyConverter__content h1 {
+  font-size: 47px;
+}
+
+  .currencyConverter__calculator__box__block__desc {
+    width: 385px;
+  }
+}
+
+@media  screen and (max-width: 480px) {
+  .currencyConverter__img {
+    img {
+      width: 350px;
+      height: 175px;
+    }
+  }
+
+  .currencyConverter__content h1 {
+    font-size: 40px;
+  }
+
+  .currencyConverter__calculator__box {
+    max-width: 400px;
+  }
+
+  .currencyConverter__calculator__box__info input {
+    width: 200px;
+  }
+
+  .currencyConverter__calculator__switch img {
+    margin-left: 200px;
+  }
+
+.switchBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+  .currencyConverter__header__switchBlock {
+    width: 84px;
+    margin-left: 45px;
+    margin-top: 10px;
+  }
+
+  .currencyConverter__header {
+    display: flex;
+    align-items: start;
+  }
+
+  .currencyConverter__header__icon {
+    margin-top: 18px;
+  }
+}
+
+@media  screen and (max-width: 430px) {
+  .currencyConverter__calculator__box {
+    max-width: 350px;
+  }
+
+  .currencyConverter__calculator__box__info input {
+    width: 180px;
+  }
+
+  .currencyConverter__calculator__switch img {
+    margin-left: 175px;
+  }
+
+  .currencyConverter__header__icon {
+    margin-left: 20px;
+  }
+  .currencyConverter__content h1 {
+    font-size: 37px;
+  }
+
+  .currencyConverter__calculator__box__block__desc {
+    width: 335px;
+  }
+
+  .currencyConverter__header__switchBlock {
+    margin-left: 16px;
+  }
+}
+
+@media  screen and (max-width: 390px) {
+  .currencyConverter__calculator__box {
+    max-width: 300px;
+  }
+
+  .currencyConverter__calculator__box__info input {
+    width: 150px;
+  }
+
+  .currencyConverter__calculator__switch img {
+    margin-left: 150px;
+  }
+
+  .currencyConverter__header__logo {
+    width: 200px;
+    height: 55px;
+  }
+
+  .currencyConverter__img {
+    img {
+      width: 300px;
+      height: 150px;
+    }
+  }
+
+  .currencyConverter__calculator__box__block__desc {
+    width: 285px;
+  }
+
+  .currencyConverter__content h1 {
+    font-size: 33px;
+  }
+}
+
+@media  screen and (max-width: 340px) {
+  .currencyConverter {
+    padding: 0 10px;
+  }
+
+  .currencyConverter__header__switchBlock {
+    margin-left: 21px;
+    width: 75px;
+  }
 }
 
 
