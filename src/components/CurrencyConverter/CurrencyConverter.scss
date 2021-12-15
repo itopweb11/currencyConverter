@@ -26,6 +26,11 @@
   display: flex;
 }
 
+.switchBlock__wrap {
+  position: relative;
+  z-index: 101;
+}
+
 .switchBlock__text {
   display: none;
 }
@@ -35,7 +40,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  z-index: 101;
 
   p {
     font-size: 22px;
@@ -46,15 +50,13 @@
 }
 
 .currencyConverter__header__switchBlock {
-  width: 70px;
-  min-height: 50px;
+  width: 55px;
   border: 1px solid white;
   background-color: white;
   margin-left: 10px;
-  z-index: 101;
 
   p {
-    font-size: 20px;
+    font-size: 14px;
     color: #0ab9cd;
     cursor: pointer;
   }
@@ -71,6 +73,9 @@
 
 .currencyConverter__header__switchBlockActive {
   display: block;
+  padding: 9px 6px;
+  position: absolute;
+  top: 8px;
 }
 
 .switchBlock__textActive {
@@ -80,9 +85,10 @@
     justify-content: center;
     cursor: pointer;
 
+    &:last-child {
+      margin-top: 5px;
+    }
     img {
-      width: 23px;
-      height: 21px;
       margin-right: 10px;
     }
   }
@@ -197,7 +203,13 @@ span {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  opacity: 0;
+  background: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  outline: none;
+  border: none;
 }
 
 .currencyConverter__calculator__box__block__desc {

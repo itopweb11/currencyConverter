@@ -19,7 +19,7 @@ const CurrencyConverter = () => {
     const [sprache, setSprache] = useState(false)
     const [lang, setLang] = useState('RU')
     const [currencyRight, setCurrencyRight] = useState('RUB')
-    const [number, setNumber] = useState('1')
+    const [number, setNumber] = useState(1)
 
     useEffect(() => {
         axios.get("https://openexchangerates.org/api/currencies.json")
@@ -46,18 +46,20 @@ const CurrencyConverter = () => {
                                 <img src={internet} alt="icon"/>
                                 <p>{language.langIcon[lang]}</p>
                             </div>
-                            <div
-                                onClick={() => setSprache(false)}
-                                className={sprache ? 'currencyConverter__header__switchBlockActive currencyConverter__header__switchBlock' : 'currencyConverter__header__switchBlockNone'}
-                            >
-                                <div className='switchBlock__textActive'>
-                                    <div>
-                                        <img src={flagEn} alt="flagEn"/>
-                                        <p onClick={() => setLang('EN')}>EN</p>
-                                    </div>
-                                    <div>
-                                        <img src={flagRu} alt="flagRu"/>
-                                        <p onClick={() => setLang('RU')}>RU</p>
+                            <div className='switchBlock__wrap'>
+                                <div
+                                    onClick={() => setSprache(false)}
+                                    className={sprache ? 'currencyConverter__header__switchBlockActive currencyConverter__header__switchBlock' : 'currencyConverter__header__switchBlockNone'}
+                                >
+                                    <div className='switchBlock__textActive'>
+                                        <div>
+                                            <img src={flagEn} alt="flagEn"/>
+                                            <p onClick={() => setLang('EN')}>EN</p>
+                                        </div>
+                                        <div>
+                                            <img src={flagRu} alt="flagRu"/>
+                                            <p onClick={() => setLang('RU')}>RU</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +96,7 @@ const CurrencyConverter = () => {
                             </div>
                             <div className='currencyConverter__calculator__box__info'>
                                 <p>{language.boxResultDesc[lang]}</p>
-                                <input value={number ? Math.round(price[currencyRight] * number*100)/100 : Math.round(price[currencyRight]*100)/100} type="text"/>
+                                <input value={number ? (price[currencyRight] * number).toFixed(2) : ''} type="text"/>
                             </div>
                         </div>
                     </div>
