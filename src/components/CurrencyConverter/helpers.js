@@ -196,5 +196,9 @@ export const language = {
     boxDesc: {
         RU: 'введите сумму',
         EN: 'enter the amount'
+    },
+    boxResultDesc: {
+        RU: 'результат',
+        EN: 'result'
     }
 }
